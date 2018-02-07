@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+<meta charset="utf-8" />
+<style>
+   .input { padding: 5px; margin: 0; border: 1px solid #beceeb; }
+   .clear { display: none; position: absolute; width: 16px; height: 16px; margin: 6px 0 0 -20px; background: url(/Content/Images/clear.png) no-repeat; outline: none; }
+   .input::-ms-clear { display: none; }
+   .input:valid + .clear { display: inline; }/*当input里面有内容时，display显示*/
+</style>
+</head>
+<body>
+    <div class="show">
+        <input class="input" required/><a href="javascript:void(0)" onmouseover="ChangeColor()" onclick="Clear()" class="clear"></a>
+    </div>
+    <script>
+        onload = function () { }
+        function ChangeColor() {
+            document.getElementsByTagName('a')[0].style.backgroundColor = "red";
+        }
+        function Clear() {
+            document.getElementsByTagName('input')[0].value = "";
+        }
+    </script>
+</body>
+</html>
