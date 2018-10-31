@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSS_Helper", "CSS_Helper\CS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OracleClient", "OracleClient\OracleClient.csproj", "{9883C472-79D3-48F9-BA22-DCEF5E91F582}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeMethod", "SomeMethod\SomeMethod.csproj", "{74E5D478-4527-4919-A178-0F5D2EC2AD58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{9883C472-79D3-48F9-BA22-DCEF5E91F582}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9883C472-79D3-48F9-BA22-DCEF5E91F582}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9883C472-79D3-48F9-BA22-DCEF5E91F582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74E5D478-4527-4919-A178-0F5D2EC2AD58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E5D478-4527-4919-A178-0F5D2EC2AD58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E5D478-4527-4919-A178-0F5D2EC2AD58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E5D478-4527-4919-A178-0F5D2EC2AD58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
