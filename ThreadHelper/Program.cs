@@ -5,6 +5,19 @@ namespace ThreadHelper
 {
     class Program
     {
+        static private int _num = 10;
+        static private ManualResetEvent finish = new ManualResetEvent(false);
+        static private void ThreadWork(object state)
+        {
+            int i = (int)state;
+            for (int j = 0; j < 3; j++)
+            {
+                Thread.Sleep(1000);
+                Console.WriteLine($"current thread {Thread.CurrentThread.ManagedThreadId} wait for {i * 10 + j + 1} seconds");
+                if (Interlocked.Decrement(ref _num) == 0)
+                    finish.Set();
+            }
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -67,6 +80,15 @@ namespace ThreadHelper
                 Console.WriteLine("Main thread do work!");
                 Thread.Sleep(200);
             }
+            #endregion
+
+            #region 通过事件或者其他的内核对象来实现同步机制，返回线程状态；并检测最后一个完成的线程，来提高效率
+            for (int i = 0; i < _num; i++)
+            {
+                ThreadPool.QueueUserWorkItem(ThreadWork, i);
+            }
+            finish.WaitOne();
+            finish.Close();
             #endregion
             Console.ReadKey();
         }
