@@ -7,6 +7,7 @@ namespace ThreadHelper
     {
         static private int _num = 10;
         static private ManualResetEvent finish = new ManualResetEvent(false);
+        static private ManualResetEventSlim slim = new ManualResetEventSlim();
         static private void ThreadWork(object state)
         {
             int i = (int)state;
